@@ -39,12 +39,12 @@ extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         if (location.speedAccuracy >= 0) {
-            let s: Double = 2.23694 * location.speed
+            let s: Double = 1.0 * location.speed
             self.speed = String(format: "%.0f", s)
             self.speedColor = interpolate(color1: green,
                                           color2: red,
                                           fraction: s / 100)
-            self.speedAccuracy = String(format: "%.1f", 2.23694 * location.speedAccuracy)
+            self.speedAccuracy = String(format: "%.1f", 1.0 * location.speedAccuracy)
         }
     }
 }

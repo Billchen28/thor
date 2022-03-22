@@ -24,7 +24,6 @@ struct ContentView: View {
         VStack {
             VStack {
                 Text(time)
-                    .foregroundColor(speedColor)
                     .font(.system(size: 150, design: .rounded))
                     .minimumScaleFactor(0.01)
                     .lineLimit(1)
@@ -33,10 +32,10 @@ struct ContentView: View {
                     .font(.system(size: 350, design: .rounded))
                     .minimumScaleFactor(0.01)
                     .lineLimit(1)
-                Text("mi/h")
+                Text("km/h")
                     .font(.system(size: 50, design: .rounded))
                     .padding(.bottom)
-                Text("Error: \(plusMinus)\(speedAccuracy) mi/h")
+                Text("Error: \(plusMinus)\(speedAccuracy) km/h")
                     .font(.system(size: 20, design: .rounded))
                     .padding(.bottom)
             }
